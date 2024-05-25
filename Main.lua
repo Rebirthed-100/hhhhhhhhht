@@ -21,7 +21,7 @@ if makefolder and isfolder and not isfolder("Rogue Hub") then
 end
 
 if not isfile("/Rogue Hub/Configs/Quotes.ROGUEHUB") then 
-    writefile("/Rogue Hub/Configs/Quotes.ROGUEHUB", req({ Url = "https://github.com/948347893875338/Rogue-Hub-Reborn/blob/main/Extra/Quotes.ROGUEHUB" }).Body);
+    writefile("/Rogue Hub/Configs/Quotes.ROGUEHUB", req({ Url = "https://github.com/Rebirthed-100/hhhhhhhhht/blob/main/Extra/Quotes.ROGUEHUB" }).Body);
 end
 
 if not isfile("/Rogue Hub/Configs/Keybind.ROGUEHUB") then
@@ -31,7 +31,7 @@ if not isfile("/Rogue Hub/Configs/Keybind.ROGUEHUB") then
 end
 
 local response = req({
-    Url = "https://github.com/948347893875338/Rogue-Hub-Reborn/tree/main/Games" .. game.PlaceId .. ".lua",
+    Url = "https://github.com/Rebirthed-100/hhhhhhhhht/tree/main/Games" .. game.PlaceId .. ".lua",
     Method = "GET"
 })
 
