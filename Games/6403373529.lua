@@ -1,6 +1,6 @@
 if getgenv().Rogue_AlreadyLoaded ~= nil then error("Spooky Hub was already found running or you have other scripts executed!") return else getgenv().Rogue_AlreadyLoaded = 0 end
 
-if game.PlaceId == 6403373529 or game.PlaceId == 9015014224 or game.PlaceId == 9431156611 then else return end
+if game.PlaceId == 6403373529 or game.PlaceId == 11520107397 or game.PlaceId == 9431156611 then else return end
 
 local isLoaded = false
 local isTping = false
