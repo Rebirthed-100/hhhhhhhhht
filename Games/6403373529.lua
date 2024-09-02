@@ -1,7 +1,4 @@
-if getgenv().Rogue_AlreadyLoaded ~= nil then error("Spooky Hub was already found running or you have other scripts executed!") return else getgenv().Rogue_AlreadyLoaded = 0 end
-
-if game.PlaceId == 6403373529 or game.PlaceId == 11520107397 or game.PlaceId == 9431156611 then else return end
-
+if game.PlaceId == 6403373529 or game.PlaceId == 11520107397 or game.PlaceId == 9431156611 or game.PlaceId == 18550498098 then else return end
 local isLoaded = false
 local isTping = false
 
@@ -89,14 +86,9 @@ sound.SoundId = "rbxassetid://1548304764"
 sound.PlayOnRemove = true
 sound.Volume = 0.5
 
-function CheckConfigFile()
-    if not isfile("/Rogue Hub/Configs/Keybind.ROGUEHUB") then return Enum.KeyCode.RightControl else return Enum.KeyCode[game:GetService("HttpService"):JSONDecode(readfile("/Rogue Hub/Configs/Keybind.ROGUEHUB"))["Key"]] or Enum.KeyCode.RightControl end
-end
-
 local Config = {
     WindowName = "Spooky Hub | " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name or "Slap Battles",
     Color = Color3.fromRGB(242, 125, 20),
-    Keybind = CheckConfigFile()
 }
 
 local localPlr = game:GetService("Players").LocalPlayer
@@ -266,7 +258,7 @@ end)
 local playerSec = mainTab:CreateSection("Player")
 
 -- CANDY CORN IS SHIT IF YOU EVER GET IT WHEN TRICK OR TREATING THROW THEM OUT
-if game.PlaceId ~= 9431156611 and game.PrivateServerId == "" then
+if game.PlaceId ~= 9431156611 then
     local corn = playerSec:CreateToggle("Candy Corns Farm", false, function(bool)
         getgenv().settings.candyFarm = bool
         
@@ -1137,7 +1129,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
             getTool().Glove.Size = Vector3.new(2.5, 2.5, 1.7)
         end
         
-        if getgenv().settings.slappleFarm and game.PlaceId ~= 9431156611 and game.PrivateServerId == "" then
+        if getgenv().settings.slappleFarm and game.PlaceId ~= 9431156611 then
             for _,v in pairs(workspace.Arena:GetDescendants()) do
                 if getgenv().settings.slappleFarm and string.find(v.Name, "Slapple") and v:FindFirstChild("Glove") and v.Glove:FindFirstChildOfClass("TouchTransmitter") then
                     firetouchinterest(localPlr.Character.HumanoidRootPart, v.Glove, 0)
